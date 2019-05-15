@@ -1,3 +1,4 @@
+    
 // This file is part of www.nand2tetris.org
 // and the book "The Elements of Computing Systems"
 // by Nisan and Schocken, MIT Press.
@@ -14,5 +15,6 @@ CHIP Bit {
     OUT out;
 
     PARTS:
-    // Put your code here:
+    DFF (in = muxIn, out=muxOut, out=out);
+    Mux (a=muxOut, b=in, sel=load, out=muxIn);
 }
